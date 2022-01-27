@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<center>
+<div class="content-section col-md-8 col-md-offset-2">
+<div class="content-section col-md-8 col-md-offset-2">
+<h2>Register</h2>
+
+<form method="post" style="border: 1px solid black; margin: 4%; padding:10%; border-radius:1%;">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-primary">&nbsp;Register</button><br>
+    <a href="{% url 'login' %}">Back to login</a>
+</form>
+</div>
+</div>
+</center>
+{% endblock %}
